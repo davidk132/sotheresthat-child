@@ -15,7 +15,7 @@ function do_something_with_content( $content ) {
 
     // Set up variables
     $posts_per_page = 3;
-    $rp_copy .= "<div class='related-posts'><h4 class='rp-header'>You May Also Like</h4><ul class='related-posts-grid'>";
+    $rp_copy .= "<div class='related-posts'><h3 class='rp-header'>You May Also Like</h3><ul class='related-posts-grid'>";
     $related_tags = wp_get_post_tags( $post->ID, array( 'fields' => 'ids') );
     /* Set up WP query for related posts. Find related tags. If none, find related category */
     if( $related_tags ) {
@@ -34,7 +34,7 @@ function do_something_with_content( $content ) {
         $rp_copy .= '<li class="rp-list-item">';
         
         // Add title
-          $rp_copy .= '<h2><a class="rp-title" href="' . get_permalink() . '">' . get_the_title() . '</a></h2><br/>';
+          $rp_copy .= '<h4><a class="rp-title" href="' . get_permalink() . '">' . get_the_title() . '</a></h4><br/>';
         
         // Add thumbnail
           $rp_copy .= '<a class="rp-thumb" href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID ) . '</a><br/>';

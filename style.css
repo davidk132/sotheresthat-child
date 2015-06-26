@@ -18,8 +18,17 @@
 
 /* Add custom styles below. */
 
-/* reset post header styles */
+/* Reset uppercase text transformation on the logo  */
+#subhead-stt {
+	text-transform: none;
+}
 
+/* Add spacing below header */
+#main-header {
+	margin-bottom: 40px;
+}
+
+/* reset post header styles */
 h1#comments,#reply-title {
 	font-size: 36px;
 	font-weight: 100;
@@ -40,6 +49,10 @@ h1#comments,#reply-title {
 }
 
 /* Styling for Related Posts at bottom of post  */
+.related-posts {
+	text-align: center;
+}
+
 ul.related-posts-grid {
   margin: 0;
   padding: 0; }
@@ -75,3 +88,4 @@ ul.related-posts-grid {
   margin-left: auto;
   margin-right: auto;
 }
+
