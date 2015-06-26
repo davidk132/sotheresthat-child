@@ -1,7 +1,7 @@
 <?php 
 /* Do stuff on public pages */
-if ( ! function_exists( 'do_something_with_content' ) ) {
-function do_something_with_content( $content ) {
+if ( ! function_exists( 'stt_something_with_content' ) ) {
+function stt_something_with_content( $content ) {
   global $post; // You'll need this, especially in the Loop, or else the post is invisible inside the function.
   
   /* Exit if not a post, page, or attachment. Unless you want plugin active in post lists, in which case remove this statement */
@@ -60,4 +60,4 @@ function do_something_with_content( $content ) {
   return $content; // if we are on an admin page
 }
 }
-add_filter( "the_content", "do_something_with_content" ); // i.e., we're inside the Loop
+add_filter( "the_content", "stt_something_with_content" ); // i.e., we're inside the Loop
