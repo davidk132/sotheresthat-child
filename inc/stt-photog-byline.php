@@ -71,7 +71,7 @@ function et_postinfo_meta() {
 		  get_the_category_list(', ')
 	  );  
   } else { // print byline to include photographer
-    printf( __( 'Written by %1$s and photography by %2$s in %3$s', 'Serene' ),
+    printf( __( 'Written by %1$s and Photography by %2$s in %3$s', 'Serene' ),
 		  et_get_the_author_posts_link(),
       $photog_url,
 		  get_the_category_list(', ')

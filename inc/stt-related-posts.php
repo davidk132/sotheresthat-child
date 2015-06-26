@@ -10,9 +10,12 @@ function do_something_with_content( $content ) {
   
   /* Do stuff as long as it's not the admin page, but rather on public posts and pages  */
   if( ! is_admin() ) {
+    // Insert So Theres That iconic image after the content
+    $rp_copy = "<br/><img id=\"image-iconic\" src=\"" . get_stylesheet_directory_uri() . "/images/SoTheresThat.png\"><br/>" ;
+
     // Set up variables
     $posts_per_page = 3;
-    $rp_copy = "<div class='related-posts'><h4 class='rp-header'>You May Also Like</h4><ul class='related-posts-grid'>";
+    $rp_copy .= "<div class='related-posts'><h4 class='rp-header'>You May Also Like</h4><ul class='related-posts-grid'>";
     $related_tags = wp_get_post_tags( $post->ID, array( 'fields' => 'ids') );
     /* Set up WP query for related posts. Find related tags. If none, find related category */
     if( $related_tags ) {

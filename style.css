@@ -67,3 +67,11 @@ ul.related-posts-grid {
       width: 28%; }
       ul.related-posts-grid li img {
         max-height: 150px; } }
+
+/* Center the iconic image at the end of the post */
+
+#image-iconic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
