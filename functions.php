@@ -38,7 +38,7 @@ function stt_add_anchor( $content ) {
 add_filter( "the_content", "stt_add_anchor" );
 
 // load script for related posts field at bottom of post
-require get_stylesheet_directory() . '/inc/stt-related-posts.php';
+require_once get_stylesheet_directory() . '/inc/stt-related-posts.php';
 
 // load script for dual byline, writer and photographer
-require get_stylesheet_directory() . '/inc/stt-photog-byline.php';
+require_once get_stylesheet_directory() . '/inc/stt-photog-byline.php';
