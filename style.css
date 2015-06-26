@@ -1,0 +1,69 @@
+/**
+ * Theme Name:  So There's That
+ * Theme URI:   http://davidkissinger.com
+ * Author:      David Kissinger
+ * Author URI:  https://davidkissinger.com
+ * Description: Child theme for sotheresthatblog.com based on Serene by Elegant Themes
+ * Version:     1.5.0
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    serene
+ * Text Domain: Serene
+ * Domain Path: /languages/
+ * Tags:        black, blue, green, gray, orange, red, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
+ *
+ */
+
+/* @import url( '../serene/style.css' ); */
+
+/* Add custom styles below. */
+
+/* reset post header styles */
+
+h1#comments,#reply-title {
+	font-size: 36px;
+	font-weight: 100;
+}
+
+/* Styling for Return to Top Button */
+
+.rtt_button {
+  text-transform: lowercase;
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+}
+
+.rtt_button:hover {
+	text-decoration: none;
+}
+
+/* Styling for Related Posts at bottom of post  */
+ul.related-posts-grid {
+  margin: 0;
+  padding: 0; }
+  ul.related-posts-grid li {
+    vertical-align: top;
+    min-height: 80px;
+    border: 1px #000;
+    display: inline-block;
+    width: 90%;
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    text-align: center; }
+    ul.related-posts-grid li img {
+      width: 80%;
+      height: auto; }
+    ul.related-posts-grid li a {
+      text-decoration: none;
+      text-align: center; }
+  @media only screen and (min-width: 768px) {
+    ul.related-posts-grid li {
+      width: 28%; }
+      ul.related-posts-grid li img {
+        max-height: 150px; } }
