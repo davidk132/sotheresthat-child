@@ -5,11 +5,15 @@
 
 // Create the metabox in the post where the photographer is designated.
 // Photographer must be a registered user on the site.
-add_action( 'add_meta_boxes', 'dkd_id_photog_create' );
-function dkd_id_photog_create() {
-  add_meta_box( 'photog-by', 'Photographer', 'dkd_id_photog', 'post', 'normal', 'high' );
-}
 
+if ( ! function_exists( 'dkd_id_photog_create' ) ) {
+  function dkd_id_photog_create() {
+    add_meta_box( 'photog-by', 'Photographer', 'dkd_id_photog', 'post', 'normal', 'high' );
+  }
+}
+add_action( 'add_meta_boxes', 'dkd_id_photog_create' );
+
+if ( ! function_exists( 'dkd_id_photog' ) ) {
 function dkd_id_photog( $post ) {
   echo "<p>Photographer credited on this post. Must be a registered user of any permissions level. If there is no photographer listed on this post, then the byline will only show the author.</p>";
   $allusers = get_users();  
@@ -38,12 +42,17 @@ function dkd_id_photog( $post ) {
   </p>
   <?php  
 }
-add_action( 'save_post', 'stt_save_photog' ); // hook to save selected photographer in post meta
+}
+
+if ( ! function_exists( 'stt_save_photog' ) ) {
 function stt_save_photog( $post_id ) {
   if (isset( $_POST['stt_photog'] ) ) {
     update_post_meta( $post_id, '_stt_photog', strip_tags( $_POST['stt_photog'] ) );
   }
 }
+}
+add_action( 'save_post', 'stt_save_photog' ); // hook to save selected photographer in post meta
+
 
 // On post, insert photographer into the standard post byline if one is designated
 if ( ! function_exists( 'stt_get_photog_id' ) ) : // iterate through user list to match display name and return ID

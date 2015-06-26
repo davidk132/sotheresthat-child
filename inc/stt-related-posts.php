@@ -1,5 +1,6 @@
 <?php 
 /* Do stuff on public pages */
+if ( ! function_exists( 'do_something_with_content' ) ) {
 function do_something_with_content( $content ) {
   global $post; // You'll need this, especially in the Loop, or else the post is invisible inside the function.
   
@@ -57,5 +58,6 @@ function do_something_with_content( $content ) {
     return $content;
   }
   return $content; // if we are on an admin page
+}
 }
 add_filter( "the_content", "do_something_with_content" ); // i.e., we're inside the Loop
